@@ -11,6 +11,9 @@ function App() {
           alt='Logo de freeCodeCamp'
         />
       </div>
+      <div className='contenedor-calculadora'>
+
+      </div>
     </div>
   );
 }
