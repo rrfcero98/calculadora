@@ -13,6 +13,10 @@ function App() {
     setInput(input + num);
   };
 
+  const clearScreen = () => {
+    setInput('');
+  }
+
   return (
     <div className="App">
       <div className="freecodecamp-logo-contenedor">
@@ -40,7 +44,7 @@ function App() {
           <Boton manejarClic = {addToChain}>7</Boton>
           <Boton manejarClic = {addToChain}>8</Boton>
           <Boton manejarClic = {addToChain}>9</Boton>
-          <Boton manejarClic = {addToChain}>x</Boton>
+          <Boton manejarClic = {addToChain}>*</Boton>
         </div>
         <div className="fila">
           <Boton manejarClic = {addToChain}>=</Boton>
@@ -49,7 +53,7 @@ function App() {
           <Boton manejarClic = {addToChain}>/</Boton>
         </div>
         <div className="fila">
-          <BotonClear>Clear</BotonClear>
+          <BotonClear manejarClic = {clearScreen}>Clear</BotonClear>
         </div>
       </div>
     </div>
