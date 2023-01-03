@@ -4,6 +4,7 @@ import Boton from "./componentes/Boton";
 import Pantalla from "./componentes/Pantalla";
 import BotonClear from "./componentes/BotonClear";
 import { useState } from 'react'; //Importando el hook useState
+import { evaluate } from 'mathjs';
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
 
   const clearScreen = () => {
     setInput('');
+  }
+
+  const calcularResultado = () => {
+    setInput(evaluate(input)); //Evaluate viene del paquete mathjs
   }
 
   return (
@@ -47,7 +52,7 @@ function App() {
           <Boton manejarClic = {addToChain}>*</Boton>
         </div>
         <div className="fila">
-          <Boton manejarClic = {addToChain}>=</Boton>
+          <Boton manejarClic = {calcularResultado}>=</Boton>
           <Boton manejarClic = {addToChain}>0</Boton>
           <Boton manejarClic = {addToChain}>.</Boton>
           <Boton manejarClic = {addToChain}>/</Boton>
