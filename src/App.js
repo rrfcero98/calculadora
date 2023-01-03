@@ -4,7 +4,7 @@ import Boton from "./componentes/Boton";
 import Pantalla from "./componentes/Pantalla";
 import BotonClear from "./componentes/BotonClear";
 import { useState } from 'react'; //Importando el hook useState
-import { evaluate } from 'mathjs';
+import { evaluate } from 'mathjs'; //Agregando paquete de Mathjs para efectuar calculos
 
 function App() {
 
