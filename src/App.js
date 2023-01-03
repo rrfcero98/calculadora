@@ -19,7 +19,11 @@ function App() {
   }
 
   const calcularResultado = () => {
-    setInput(evaluate(input)); //Evaluate viene del paquete mathjs
+    if (input) {
+      setInput(evaluate(input)); //Evaluate viene del paquete mathjs
+    } else {
+      alert("Por favor ingrese valores para realizar los calculos");
+    }
   }
 
   return (
